@@ -1,0 +1,140 @@
+body{height:100%;background:#FFF;padding:0px;}
+h1,h2,h3{color:#01b9f0;}
+h4,h5,h6{color:#d8e43a;}
+h3.seccion{background:#01b9f0;color:#FFF;padding:10px 20px;}
+.title-area img{margin-top:-4px;}
+nav.top-bar.expanded{background:#222222;}
+nav.top-bar{}
+nav.iframe{clear:both;width:100%;}
+#googlemaps{height:300px;margin-bottom:30px;}
+#googlemaps.sitio{height:400px;margin-bottom:0px;}
+#googlemaps h3,h4,h5,h6{color:#01b9f0;}
+#mapaindex{min-height:100px;margin-top:-30px;}
+#flotante{position:fixed;top:75px;right:20px;max-width:200px;background:#111111;display:block;padding:20px;color:#FFF;font-size:0.9em;
+-webkit-box-shadow:  2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+box-shadow:  2px 2px 5px 0px rgba(0, 0, 0, 0.5);}
+#flotante .flotante_opcion{margin:7px 0px;}
+#flotante #deslizar{background:#222;position:relative;height:24px;bottom:40px;color:#FFF;padding:5px 10px;display:none;}
+#loader{display:none;}
+#deslizartop{display:none;}
+#map_container div {
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+}
+#barra_android{padding:10px;clear:both;background-color:#D1E29C;margin:0px;border:1px solid #D1E29C;margin-top:-30px;margin-bottom:30px;}
+#barra_android a{color:#464D5C!important;font-size:0.8em!important;}
+#barra_android a.cerrar{float:right;}
+iframe.mapasitio{width:100%;}
+div.calificaciones{border-top:2px solid #01b9f0;border-bottom:2px solid #01b9f0;padding-top:20px;}
+div.calificaciones strong{color:#01b9f0; padding-bottom:20px;}
+div.compartir{padding-top:20px;padding-bottom:20px;}
+.row ul{padding-left:20px;}
+.gm-style div.rateit{display: inline-block;}
+.gm-style img{max-width: none;}
+div.gm-style-iw{min-width:200px;}
+div.infocalificacion{margin:0px 0px 20px 0px;}
+textarea{min-height:200px;}
+img.logobicimapa{width:100%;max-width:621px;}
+a.todos,a.ninguno{font-size:0.8em;}
+img.maparesultadobusqueda{max-width:400px;width:100%;}
+
+div.bicigente_categoria{background:#01b9f0;color:#FFF!important;border-bottom:1px solid #FFF;}
+	div.bicigente_categoria h3{color:#FFF!important;padding:5px;margin:5px;}
+div.bicigente_nombre{border-bottom: 1px solid #CCC;}
+	div.bicigente_nombre h3{display:inline;padding:5px;margin:5px;line-height:32px;}
+	div.bicigente_nombre img{vertical-align:middle;padding:10px 0px;}
+	div.bicigente_nombre a{white-space:nowrap;}
+div.bicigente_ciudad{background:#CCC;}
+	div.bicigente_ciudad h3{color:#000!important;padding:5px;margin:5px;}
+
+div.buscaradmin{background:#EEE;display:none;padding:10px;}
+
+#listaciudades{position:fixed;top:75px;left:75px;max-width:600px;width:100%;background:#FFF;display:block;padding:20px;color:#FFF;font-size:0.9em;
+-webkit-box-shadow:  2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+box-shadow:  2px 2px 5px 0px rgba(0, 0, 0, 0.5);}
+
+/* Small screens */
+@media only screen and (max-width: 58.75em), only screen and (max-height: 550px) {
+	#flotante{position:static;max-width:100%;background:#222;padding:20px;color:#FFF;
+	-webkit-box-shadow:  2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+	box-shadow:  2px 2px 5px 0px rgba(0, 0, 0, 0.5);}
+	#flotante #deslizar{display:inline;}
+	#loader{position:relative;float:right;bottom:60px;right:10px;background:#222;padding:5px;color:#FFF;}
+	#deslizartop{display:block;color:#FFF;text-align:right;}
+}
+
+@media only screen and (min-width: 58.75em) {
+	.top-bar-section li a.redessociales{padding:0px 5px!important;max-width:40px;}
+	.top-bar-section li a.redessociales span{display:none;}
+}
+
+@media only screen and (min-width: 58.75em) and (max-width: 1185px) {
+	.top-bar-item span{display:none;}
+}
+
+
+
+/*=========MODAL==========*/
+.modal{
+	position: fixed;
+	z-index:99;
+	top: 0;
+	left: 0;
+	height:100%;
+	width:100%;
+	background: RGBA(0,0,0,0.7);
+	display: none;
+}
+.modal .modal2{
+	position: fixed;
+	z-index:200;
+	top: 0;
+	left: 50%;
+	height:80%;
+	width:500px;
+	background: #FFF;
+	margin-top:30px;
+	margin-left:-250px;
+	padding:20px;
+	overflow:auto;
+}
+/*======= Facebook Comments =========*/
+.fb-comments, .fb-comments * {
+	width:100% !important;
+}
+
+/*======= Facebook Button =========*/
+a.facebooklogin {
+background:url("http://www.bicimapa.com/img/white_facebook.png") no-repeat left center #4d7de1;
+border-bottom-color:#294c89;
+border-bottom-left-radius:5px;
+border-bottom-right-radius:5px;
+border-bottom-style:solid;
+border-bottom-width:1px;
+border-image-outset:0 0 0 0;
+border-image-repeat:stretch stretch;
+border-image-slice:100% 100% 100% 100%;
+border-image-source:none;
+border-image-width:1 1 1 1;
+border-left-color-value:#294c89;
+border-left-style-value:solid;
+border-left-width-value:1px;
+border-right-color-value:#294c89;
+border-right-style-value:solid;
+border-right-width-value:1px;
+border-top-color:#294c89;
+border-top-left-radius:5px;
+border-top-right-radius:5px;
+border-top-style:solid;
+border-top-width:1px;
+box-shadow:0 1px 0 rgba(255,255,255,0.3) inset, 0 1px 0 rgba(0,0,0,0.1);
+color:#fff;
+display:inline-block;
+line-height:32px;
+padding:10px 30px 10px 62px;
+margin:0 2px 5px 0;
+vertical-align:middle;
+white-space:nowrap;
+}
+a.facebooklogin:hover{background-color: #5384ed;}

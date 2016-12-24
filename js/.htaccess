@@ -1,0 +1,21 @@
+AddType application/x-httpd-php .htm .xml .rss
+
+# BEGIN
+<IfModule mod_rewrite.c>
+RewriteEngine On
+Options FollowSymLinks
+RewriteBase /js/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^bicimapa.js$ bicimapa.php [QSA]
+</ifModule>
+# END
+
+# ERRORES
+ErrorDocument 401 /404.php?m=401
+ErrorDocument 403 /404.php?m=403
+ErrorDocument 404 /404.php?m=404
+ErrorDocument 500 /404.php?m=500
+ErrorDocument 502 /404.php?m=502
+# ERRORES

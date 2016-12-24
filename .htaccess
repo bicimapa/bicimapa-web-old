@@ -1,0 +1,67 @@
+AddType application/x-httpd-php .htm .xml .rss
+
+# Turn on Expires and set default to 0
+ExpiresActive On
+ExpiresDefault A0
+# Set up caching on media files for 1 week
+<FilesMatch "\.(gif|jpg|jpeg|png|swf|js|css)$">
+ExpiresDefault A604800
+Header append Cache-Control "public"
+</FilesMatch>
+# Force no caching for dynamic files
+<FilesMatch "\.(php|cgi|pl|htm|xml|txt|html)$">
+ExpiresActive Off
+Header set Cache-Control "private, no-cache, no-store, proxy-revalidate, no-transform"
+Header set Pragma "no-cache"
+</FilesMatch>
+
+#Compress
+AddOutputFilterByType DEFLATE application/x-javascript
+<files *.js>
+SetOutputFilter DEFLATE
+</files>
+<files *.css>
+SetOutputFilter DEFLATE
+</files>
+
+# BEGIN
+<IfModule mod_rewrite.c>
+RewriteEngine On
+Options FollowSymLinks
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^bicimapa\.com
+RewriteRule (.*) http://www.bicimapa.com/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^sitio/([^/]*)$ sitio.php?id=$1 [QSA]
+RewriteRule ^s/([^/]*)$ s.php?s=$1 [QSA]
+RewriteRule ^bicigente/$ bicigente.php [QSA]
+RewriteRule ^bicigente$ bicigente.php [QSA]
+RewriteRule ^biciplanes/$ biciplanes.php [QSA]
+RewriteRule ^biciplanes$ biciplanes.php [QSA]
+RewriteRule ^buscar/$ buscar.php [QSA]
+RewriteRule ^buscar$ buscar.php [QSA]
+RewriteRule ^sugerir/$ sugerir.php [QSA]
+RewriteRule ^sugerir$ sugerir.php [QSA]
+RewriteRule ^biciplanes_sugerir/$ biciplanes_sugerir.php [QSA]
+RewriteRule ^biciplanes_sugerir$ biciplanes_sugerir.php [QSA]
+RewriteRule ^agregar/$ agregar.php [QSA]
+RewriteRule ^agregar$ agregar.php [QSA]
+RewriteRule ^api/$ api.php [QSA]
+RewriteRule ^api$ api.php [QSA]
+RewriteRule ^terminos-y-condiciones/$ terminos-y-condiciones.php [QSA]
+RewriteRule ^terminos-y-condiciones$ terminos-y-condiciones.php [QSA]
+RewriteRule ^sitemap.xml$ sitemap.php
+
+</ifModule>
+# END
+
+# ERRORES
+ErrorDocument 401 /404.php?m=401
+ErrorDocument 403 /404.php?m=403
+ErrorDocument 404 /404.php?m=404
+ErrorDocument 500 /404.php?m=500
+ErrorDocument 502 /404.php?m=502
+# ERRORES
